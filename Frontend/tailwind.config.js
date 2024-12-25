@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}', // Ensures Tailwind is applied to all JSX files
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        everglade: '#517d73',
+      },
+    },
   },
   plugins: [],
 };

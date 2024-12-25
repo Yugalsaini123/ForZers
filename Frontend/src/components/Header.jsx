@@ -1,11 +1,13 @@
+// Frontend/src/components/Header.jsx
+
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
   const [activePage, setActivePage] = useState('/');
 
-  const activeClass = "text-white font-medium";
-  const inactiveClass = "text-blue-200";
+  const activeClass = "text-black font-medium";
+  const inactiveClass = "text-black";
 
   const closeDropdown = () => setDropdown(false);
 
@@ -31,16 +33,22 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-blue-600 text-white p-4 md:p-8">
+    <header className="bg-white-600 text-white p-4 md:p-8">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="text-2xl md:text-3xl font-bold">forZers</a>
+      <a href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="text-2xl md:text-3xl font-bold">
+        <img src="/Assets/logoremovebg.png" alt="forZers Logo" className="h-8 w-8 md:h-10 md:w-10" />
+      </a>
+
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
           <a href="/jobs" onClick={(e) => { e.preventDefault(); handleNavigation('/jobs'); }} className={`hover:underline ${activePage === '/jobs' ? activeClass : inactiveClass}`}>Find Jobs</a>
+          <a href="/about" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} className={`hover:underline ${activePage === '/services' ? activeClass : inactiveClass}`}>Services</a>
+          <a href="/contact" onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }} className={`hover:underline ${activePage === '/startups' ? activeClass : inactiveClass}`}>Startup Assistance</a>
           <a href="/about" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} className={`hover:underline ${activePage === '/about' ? activeClass : inactiveClass}`}>About Us</a>
           <a href="/contact" onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }} className={`hover:underline ${activePage === '/contact' ? activeClass : inactiveClass}`}>Contact</a>
-          <button className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-100 transition duration-300">Sign In</button>
+          <button className="bg-everglade text-black px-4 py-2 rounded hover:bg-teal-800  transition duration-300">Register</button>
+          <button className="bg-everglade text-black px-4 py-2 rounded hover:bg-teal-800  transition duration-300">Sign In</button>
         </nav>
         
         {/* Mobile Navigation Toggle */}
@@ -50,6 +58,8 @@ const Header = () => {
           </svg>
         </button>
       </div>
+
+      
 
       {/* Mobile Dropdown */}
       {dropdown && (

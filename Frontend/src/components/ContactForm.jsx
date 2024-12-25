@@ -12,7 +12,7 @@ const ContactForm = () => {
           <input className="border rounded-lg p-4" type="email" placeholder="Email" />
           <input className="border rounded-lg p-4" type="text" placeholder="Company Name" />
           <textarea className="border rounded-lg p-4" placeholder="How can we help?" rows="4"></textarea>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg">Submit</button>
+          <button className="bg-everglade text-white px-6 py-3 rounded-lg hover:bg-teal-800">Submit</button>
         </form>
       </div>
     </section>
