@@ -6,8 +6,8 @@ const Header = () => {
   const [dropdown, setDropdown] = useState(false);
   const [activePage, setActivePage] = useState('/');
 
-  const activeClass = "text-black font-medium";
-  const inactiveClass = "text-black";
+  const activeClass = "text-teal-800 font-medium";
+  const inactiveClass = "text-teal-800";
 
   const closeDropdown = () => setDropdown(false);
 
@@ -33,22 +33,25 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white-600 text-white p-4 md:p-8">
+    <header className="bg-white-600 text-white pr-2 p-0 pb-0 md: pr-4 p-0 pb-0">
       <div className="container mx-auto flex justify-between items-center">
-      <a href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="text-2xl md:text-3xl font-bold">
-        <img src="/Assets/logoremovebg.png" alt="forZers Logo" className="h-8 w-8 md:h-10 md:w-10" />
+      <a href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="pb-0 text-2xl md:pb-0 text-3xl font-bold">
+        <img src="newweblogo.svg" alt="forZers Logo" className="h-16 w-16 pb-0 pt-0 md:h-32 md:w-32 pb-0 pt-0" />
       </a>
 
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
           <a href="/jobs" onClick={(e) => { e.preventDefault(); handleNavigation('/jobs'); }} className={`hover:underline ${activePage === '/jobs' ? activeClass : inactiveClass}`}>Find Jobs</a>
-          <a href="/about" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} className={`hover:underline ${activePage === '/services' ? activeClass : inactiveClass}`}>Services</a>
-          <a href="/contact" onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }} className={`hover:underline ${activePage === '/startups' ? activeClass : inactiveClass}`}>Startup Assistance</a>
+          <a href="/services" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} className={`hover:underline ${activePage === '/services' ? activeClass : inactiveClass}`}>Services</a>
+          <a href="/startups" onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }} className={`hover:underline ${activePage === '/startups' ? activeClass : inactiveClass}`}>Startup Assistance</a>
           <a href="/about" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} className={`hover:underline ${activePage === '/about' ? activeClass : inactiveClass}`}>About Us</a>
           <a href="/contact" onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }} className={`hover:underline ${activePage === '/contact' ? activeClass : inactiveClass}`}>Contact</a>
-          <button className="bg-everglade text-black px-4 py-2 rounded hover:bg-teal-800  transition duration-300">Register</button>
-          <button className="bg-everglade text-black px-4 py-2 rounded hover:bg-teal-800  transition duration-300">Sign In</button>
+          <button className="bg-white text-teal-800 hover:text-white border border-teal-800 px-4 py-2 rounded hover:bg-teal-800 transition duration-300">
+            Login
+          </button>
+
+          <button className="bg-teal-800 text-white hover:text-teal-800 px-4 py-2 rounded hover:bg-white hover:border border-teal-800 transition duration-300">Register</button>
         </nav>
         
         {/* Mobile Navigation Toggle */}

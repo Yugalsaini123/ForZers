@@ -1,0 +1,26 @@
+.jobs-message-container {
+    width: fit-content; /* Adjust to content width dynamically */
+    /* margin: 0 auto;  */
+    overflow: hidden;
+  }
+  
+  .slick-slider .slick-list {
+    overflow: hidden; /* Ensures only one slide is visible */
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .animated-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f59e0b; /* Amber color */
+    white-space: nowrap; /* Prevents wrapping */
+    transition: width 0.5s ease-in-out; /* Smooth transition for resizing */
+  }
+  
+
+  

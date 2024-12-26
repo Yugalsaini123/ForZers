@@ -5,7 +5,7 @@ import JobCategories from './components/JobCategories.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import Footer from './components/Footer.jsx';
-
+import Services from './components/services.jsx';
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
       <Header />
       <AboutUs />
       <JobCategories />
+      <Services/>
       <Testimonials />
       <ContactForm />
       <Footer />
