@@ -6,37 +6,38 @@ const AboutUs = () => {
   return (
     <>
       {/* Desktop version */}
-      <div className="hidden md:flex justify-between items-center px-[100px] flex text-[#1A1C1F] flex-col space-y-8 w-[40%] bg-cover bg-center">
-        <p className="font-bold text-xl flex items-center">
-          Your <AnimatedText /> Is Just A Step Away!
-        </p>
-        <div className="px-4 w-fit border border-gray-300 bg-white rounded-3xl shadow-lg p-4 mt-[0px]">
-          <div className="flex items-center space-x-2 mt-[20px]">
-            <input
-              type="text"
-              placeholder="Enter Skills, Designation, etc."
-              className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] w-full"
-            />
-            <select
-              className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] text-gray-500"
-            >
-              <option>Experience</option>
-              <option>0-1 Years</option>
-              <option>1-2 Years</option>
-              <option>2+ Years</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Location"
-              className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] w-full"
-            />
-            <button className="bg-teal-800 text-white hover:text-teal-800 px-[10px] py-[10px] rounded-[5px] w-full rounded hover:bg-white hover:border border-teal-800 transition duration-300">
-              Let's Find
-            </button>
+      <div className=" flex items-center justify-start">
+        <div className="w-fit hidden md:grid grid-cols-1 gap-0 place-items-center  px-[100px] flex text-[#1A1C1F] flex-col space-y-8 w-[40%] bg-cover bg-center">
+          <p className="font-bold text-xl flex items-center">
+            Your &ensp; <AnimatedText /> &ensp; Is Just A Step Away!
+          </p>
+          <div className="px-4  border border-gray-300 bg-white rounded-3xl shadow-lg p-4 mt-[0px]">
+            <div className="flex items-center space-x-2 mt-[20px]">
+              <input
+                type="text"
+                placeholder="Enter Skills, Designation, etc."
+                className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] w-full"
+              />
+              <select
+                className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] text-gray-500"
+              >
+                <option>Experience</option>
+                <option>0-1 Years</option>
+                <option>1-2 Years</option>
+                <option>2+ Years</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Location"
+                className="border border-gray-300 px-[10px] py-[10px] rounded-[5px] w-full"
+              />
+              <button className="bg-teal-800 text-white hover:text-teal-800 px-[10px] py-[10px] rounded-[5px] w-full rounded hover:bg-white hover:border border-teal-800 transition duration-300">
+                Let's Find
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
       <div
         className="hidden md:flex justify-between items-center px-[100px] py-[225px] bg-cover bg-center"
         style={{
