@@ -5,9 +5,24 @@ import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg
 
 const Footer = () => {
   return (
-    <footer className="bg-teal-800 text-white py-8">
+    <footer className="bg-teal-800 text-white py-4">
       <div className="container mx-auto text-center">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mt-8">
+          <div>
+            <h3 className="text-lg font-semibold">Follow Us</h3>
+            <div className="flex justify-center space-x-4 mt-0">
+              <a href="/" className="pb-0 text-2xl md:pb-0 text-3xl font-bold">
+                <img src="/Assets/logoremovebg.png" alt="forZers Logo" className="h-8 w-8 pb-0 pt-0 md:h-16 md:w-16 pb-0 pt-0" />
+              </a>
+            </div>
+            <div className="flex justify-center space-x-4 mt-0">
+              <a href="https://instagram.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+              <a href="https://facebook.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
+              <a href="https://linkedin.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="lg" /></a>
+              <a href="https://twitter.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faXTwitter}  size="lg" /></a>
+              <a href="https://youtube.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
+            </div>
+          </div>
           <div>
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="mt-2 space-y-2">
@@ -42,32 +57,23 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-8">
-          <h3 className="text-lg font-semibold">Follow Us</h3>
-          <div className="flex justify-center space-x-4 mt-4">
-            <a href="https://instagram.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
-            <a href="https://facebook.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
-            <a href="https://linkedin.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-            <a href="https://twitter.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faXTwitter}  size="2x" /></a>
-            <a href="https://youtube.com" className="hover:text-gray-400" target="_blank"><FontAwesomeIcon icon={faYoutube} size="2x" /></a>
-          </div>
-        </div>
-        <div className="mt-8">
+        <div className="mt-6">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-         
-          <div className="flex justify-center space-x-4 mt-4">
-            <p>© 2024 FORZERS - All Rights Reserved</p>
+          <div className="flex justify-center space-x-4 mt-2 relative">
+            <div className="absolute top-0 left-4 pl-4">
+              <p>© 2024 FORZERS - All Rights Reserved</p>
+            </div>
             <div className="flex items-center space-x-2">
-            <a href="tel:+91 8233242077" className="hover:text-gray-400">
-              <FontAwesomeIcon icon={faPhone} />
-              <span>+91 8233242077</span>
-            </a>
+              <a href="tel:+91 8233242077" className="hover:text-gray-400">
+                <FontAwesomeIcon icon={faPhone} />
+                <span>+91 8233242077</span>
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <a href="mailto: forzersfz@gmail.com" className="hover:text-gray-400">
-              <FontAwesomeIcon icon={faEnvelope} />
-              &thinsp;
-              <span> forzersfz@gmail.com</span>
+                <FontAwesomeIcon icon={faEnvelope} />
+                &thinsp;
+                <span> forzersfz@gmail.com</span>
               </a>
             </div>
             <div className="flex items-center space-x-2">
