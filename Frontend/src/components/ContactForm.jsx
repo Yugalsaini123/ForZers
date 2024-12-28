@@ -3,7 +3,7 @@ import React from 'react';
 const ContactForm = () => {
   return (
     <section id="contact" className="py-12">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto bg-gray-50 text-center">
         <h2 className="text-4xl font-bold mb-6">Let’s find great talents!</h2>
         <p className="mb-8">Connect with us to discover top-notch talents that can drive your business forward.</p>
         <form className="grid grid-cols-1 gap-4 max-w-xl mx-auto">
