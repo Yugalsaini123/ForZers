@@ -37,7 +37,7 @@ const LoginModal = ({ isOpen, onClose }) => {
             <h2 className="text-xl font-bold text-center">Login to ForZers</h2>
             <p className="text-center text-sm text-gray-500 mt-2">
               Don't have an account?{" "}
-              <a href="#" className="text-teal-600 font-medium">
+              <a href="#" className="text-teal-600 font-medium hover:underline">
                 Register Now
               </a>
             </p>
@@ -54,7 +54,7 @@ const LoginModal = ({ isOpen, onClose }) => {
               />
               <a
                 href="#"
-                className="text-teal-600 text-sm block text-right font-medium"
+                className="text-teal-600 text-sm block text-right font-medium hover:underline"
               >
                 Forgot Password?
               </a>

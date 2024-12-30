@@ -1,11 +1,13 @@
 // Frontend/src/components/Header.jsx
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import LoginModal from './LoginModal'; // Make sure the import path is correct
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
   const [activePage, setActivePage] = useState('/');
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const navigate = useNavigate();
 
   const activeClass = "text-teal-800 font-medium";
   const inactiveClass = "text-teal-800";
@@ -27,10 +29,10 @@ const Header = () => {
     setActivePage(window.location.pathname);
   }, []);
 
-  const handleNavigation = (path) => {
-    setActivePage(path);
-    window.history.pushState({}, '', path);
-    closeDropdown();
+  const handleNavigation = (path) => { 
+    setActivePage(path); 
+    navigate(path);
+    closeDropdown(); 
   };
 
   return (
@@ -52,7 +54,12 @@ const Header = () => {
               Login
             </button>
 
-            <button className="bg-teal-800 text-white hover:text-teal-800 px-4 py-2 rounded hover:bg-white hover:border border-teal-800 transition duration-300">Register</button>
+            <button
+              className="bg-teal-800 text-white hover:text-teal-800 px-4 py-2 rounded hover:bg-white hover:border border-teal-800 transition duration-300"
+              onClick={() => handleNavigation('/register')}
+            >
+              Register
+            </button>
           </nav>
 
           {/* Mobile Navigation Toggle */}
